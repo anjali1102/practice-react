@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-const list =[1, 2, 3, 4, 5];
+
 
 function Lake({name}){
   return (
@@ -19,13 +19,19 @@ function SkiResort({name}){
 }
 
 function App(props){
-  if(props.season==="summer"){
-    return <Lake name="Jenny Lake" />;
-  }else if(props.season==="winter"){
-  return <SkiResort name="JHMR" /> 
-  }
+  return(
+    <div>
+      {props.season==="summer"?(
+        <Lake name="Jenny Lake" />
+      ):props.season==="winter" ? (
+        <SkiResort name="JHMR" /> 
+      ):(
+        <h1>
+          Come Back winter or summer !
+        </h1>
+      )}
+    </div>
+  );
 }
 
-
-
-ReactDOM.render(<App season="summer" />, document.getElementById("root"));
+ReactDOM.render(<App season="winter" />, document.getElementById("root"));
