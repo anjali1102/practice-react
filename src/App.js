@@ -1,15 +1,10 @@
-import './App.css';
+import "./styles.css";
 
-function Lake({name}){
-  return <h1>{name}</h1>;
-}
-
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <Lake name="lake1"/>
-      <Lake name="lake2"/>
-      <Lake name="lake3"/>
+      <h1>Hello CodeSandbox</h1>
+      <h2>Start editing to see some magic happen!</h2>
     </div>
   );
-}export default App;
+}
